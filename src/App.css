@@ -1,0 +1,11 @@
+.wrap {
+    display: flex;
+}
+.users, .posts {
+    width: 49%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
