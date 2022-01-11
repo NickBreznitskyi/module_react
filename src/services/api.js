@@ -9,7 +9,7 @@ export const GetUsers = () => {
             .then(value => setUsers(value))
     }, [])
 
-    return users.map(value => value);
+    return users;
 }
 
 export const GetPosts = () => {
