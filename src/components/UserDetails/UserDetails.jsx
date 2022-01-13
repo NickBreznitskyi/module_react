@@ -1,6 +1,4 @@
-const UserDetails = ({user:{id,name,username,email,phone,website},getPosts}) => {
-
-
+const UserDetails = ({user: {id, name, username, email, phone, website}, getPosts}) => {
 
     return (
         <div>
@@ -13,7 +11,7 @@ const UserDetails = ({user:{id,name,username,email,phone,website},getPosts}) => 
                 <p>phone: {phone}</p>
                 <p>website: {website}</p>
             </div>
-            <button onClick={()=>getPosts()}>Get Posts</button>
+            <button onClick={() => getPosts()}>Get Posts</button>
         </div>
     );
 };

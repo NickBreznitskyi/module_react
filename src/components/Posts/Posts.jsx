@@ -1,6 +1,6 @@
 import './Posts.css'
 
-const Posts = ({post:{userId, id, title, body}}) => {
+const Posts = ({post: {userId, id, title, body}}) => {
 
 
     return (
