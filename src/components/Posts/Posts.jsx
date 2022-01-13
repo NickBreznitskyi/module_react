@@ -1,15 +1,19 @@
 import './Posts.css'
 
-const Posts = ({post: {userId, id, title, body}}) => {
+const Posts = ({posts}) => {
 
 
     return (
-        <div className={'post'}>
-            <p>userId: {userId}</p>
-            <p>id: {id}</p>
-            <p>title: {title}</p>
-            <p>body: {body}</p>
-        </div>
+        <>
+            {posts.map((post) => (
+                <div className={"post"}>
+                    <p>userId: {post.userId}</p>
+                    <p>id: {post.id}</p>
+                    <p>title: {post.title}</p>
+                    <p>body: {post.body}</p>
+                </div>
+            ))}
+        </>
     );
 };
 

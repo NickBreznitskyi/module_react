@@ -1,13 +1,3 @@
-.wrap, .posts {
-    display: flex;
-    justify-content: space-around;
-}
-
-.users, .usersDetails {
-    width: 50%;
-}
-
-.posts {
-    flex-wrap: wrap;
-    margin-top: 40px;
+.users {
+    width: 47%;
 }
