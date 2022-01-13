@@ -4,7 +4,6 @@ import {userService} from "../../services/user.service";
 import User from "../User/User";
 import UserDetails from "../UserDetails/UserDetails";
 import './Users.css'
-import {postService} from "../../services/post.service";
 import Posts from "../Posts/Posts";
 
 const Users = () => {
@@ -22,8 +21,8 @@ const Users = () => {
             .then(user => setUser(user))
     }
 
-    const getPosts = () => {
-        postService.getAll()
+    const getPosts = (id) => {
+        userService.getPost(id)
             .then(posts => setPosts(posts))
     }
     return (
@@ -45,7 +44,7 @@ const Users = () => {
                 </div>
             </div>
             <div className={'posts'}>
-                {posts && posts.filter((value => value.userId === user.id)).map((value => <Posts key ={value.id} post={value}/> ))}
+                {posts && posts.map((value => <Posts key ={value.id} post={value}/> ))}
             </div>
         </div>
     );

@@ -11,7 +11,7 @@ const UserDetails = ({user: {id, name, username, email, phone, website}, getPost
                 <p>phone: {phone}</p>
                 <p>website: {website}</p>
             </div>
-            <button onClick={() => getPosts()}>Get Posts</button>
+            <button onClick={() => getPosts(id)}>Get Posts</button>
         </div>
     );
 };
