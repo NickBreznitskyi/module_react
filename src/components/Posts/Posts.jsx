@@ -1,8 +1,10 @@
+import './Posts.css'
+
 const Posts = ({post:{userId, id, title, body}}) => {
 
 
     return (
-        <div>
+        <div className={'post'}>
             <p>userId: {userId}</p>
             <p>id: {id}</p>
             <p>title: {title}</p>

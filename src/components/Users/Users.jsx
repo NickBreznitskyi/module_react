@@ -28,15 +28,15 @@ const Users = () => {
     }
     return (
         <div>
-            <div className={'users'}>
-                <div>
+            <div className={'wrap'}>
+                <div className={'users'}>
                     <h2>Users</h2>
                     {users.map(value => <User
                         key={value.id}
                         user={value}
                         getUserId={getUserId}/>)}
                 </div>
-                <div>
+                <div className={'usersDetails'}>
                     {user && <UserDetails
                         key={user.id}
                         user={user}
@@ -44,7 +44,7 @@ const Users = () => {
                     />}
                 </div>
             </div>
-            <div>
+            <div className={'posts'}>
                 {posts && posts.filter((value => value.userId === user.id)).map((value => <Posts key ={value.id} post={value}/> ))}
             </div>
         </div>
