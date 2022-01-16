@@ -1,11 +1,19 @@
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-   <div>
+import Cars from "./components/Cars/Cars";
+import Form from "./components/Form/Form";
 
-   </div>
-  );
-}
+
+const App = () => {
+
+    const [car, setCar] = useState(null);
+
+    return (
+        <div>
+            <Form setCar={setCar} btn={'Create Car'}/>
+            <Cars car={car} setCar={setCar}/>
+        </div>
+    );
+};
 
 export default App;
