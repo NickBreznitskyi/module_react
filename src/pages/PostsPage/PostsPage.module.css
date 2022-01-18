@@ -1,0 +1,13 @@
+.Posts {
+    width: 33%;
+    background-color: #d7efff;
+    padding: 10px;
+}
+
+.Posts h2 {
+    text-align: center;
+}
+
+.dFlex {
+    display: flex;
+}

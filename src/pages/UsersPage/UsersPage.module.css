@@ -1,0 +1,13 @@
+.Users {
+    width: 33%;
+    background-color: #d7efff;
+    padding: 10px;
+}
+
+.Users h2 {
+    text-align: center;
+}
+
+.dFlex {
+    display: flex;
+}
