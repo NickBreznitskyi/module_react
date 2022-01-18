@@ -19,7 +19,7 @@ const UsersPage = () => {
                 <h2>Users</h2>
                 {users.map(value => <User key={value.id} user={value}/>)}
             </div>
-            <div>
+            <div className={style.Outlet}>
                 <Outlet/>
             </div>
         </div>

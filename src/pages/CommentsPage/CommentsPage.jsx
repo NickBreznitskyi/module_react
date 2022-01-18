@@ -14,11 +14,11 @@ const CommentsPage = () => {
         commentService.getByPostId(state.id).then(value => setComments(value.data))
     }, [state.id])
     return (
-        <div>
+        <>
             <div className={style.CommentsPage}>{comments.map(value => <Comment key={value.id}
                                                                                 comments={value}/>)}</div>
             <div><Outlet/></div>
-        </div>
+        </>
     );
 };
 

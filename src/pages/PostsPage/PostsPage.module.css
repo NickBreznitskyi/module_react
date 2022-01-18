@@ -2,12 +2,21 @@
     width: 33%;
     background-color: #d7efff;
     padding: 10px;
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    font-size: 25px;
 }
 
 .Posts h2 {
     text-align: center;
+    font-size: 30px;
 }
 
 .dFlex {
     display: flex;
+}
+
+.Outlet {
+    width: 66%;
+    font-size: 25px;
 }

@@ -7,11 +7,14 @@ const PostSinglePage = () => {
     const location = useLocation();
     const {state} = location;
     return (
-        <div>
+        <>
             <div className={style.PostSinglePage}>
                 <div>id: {state.id}</div>
+                <hr/>
                 <div>userId: {state.userId}</div>
+                <hr/>
                 <div>title: {state.title}</div>
+                <hr/>
                 <div>body: {state.body}</div>
                 <div>
                     <Link to={'comments'} state={state}>
@@ -22,7 +25,7 @@ const PostSinglePage = () => {
             <div>
                 <Outlet/>
             </div>
-        </div>
+        </>
     );
 };
 

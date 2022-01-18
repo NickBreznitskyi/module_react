@@ -5,7 +5,8 @@ const Post = ({post}) => {
     const {id, title} = post;
     return (
         <div>
-            <Link to={id.toString()} state={post}>{id}) {title}</Link>
+            {id}) {title} <Link to={id.toString()} state={post}>Details</Link>
+            <hr/>
         </div>
     );
 };

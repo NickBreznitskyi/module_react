@@ -14,9 +14,9 @@ const UserPostsPage = () => {
     }, [id])
 
     return (
-        <div>
+        <>
             {posts.map(value => <Post key={value.id} post={value}/>)}
-        </div>
+        </>
     );
 };
 

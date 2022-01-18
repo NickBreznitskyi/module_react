@@ -18,7 +18,7 @@ const PostsPage = () => {
                 <h2>Posts</h2>
                 {posts.map(value => <Post key={value.id} post={value}/>)}
             </div>
-            <div>
+            <div className={style.Outlet}>
                 <Outlet/>
             </div>
         </div>

@@ -10,6 +10,7 @@ const UserSinglePage = () => {
     return (
         <div>
             <div className={style.UserSinglePage}>
+                <h2>User Details</h2>
                 <div>id: {id},</div>
                 <div>name {name},</div>
                 <div>username: {username},</div>

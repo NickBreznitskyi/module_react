@@ -9,6 +9,7 @@ const Comment = ({comments}) => {
             <div>name: {name}</div>
             <div>email: {email}</div>
             <div>body: {body}</div>
+            <hr/>
         </div>
     );
 };
