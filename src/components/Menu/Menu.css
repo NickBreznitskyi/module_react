@@ -1,0 +1,11 @@
+.Menu button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.Menu {
+    margin-top: 20px;
+}

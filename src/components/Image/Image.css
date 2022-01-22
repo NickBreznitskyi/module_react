@@ -1,0 +1,10 @@
+.Image img {
+    display: block;
+}
+
+.Image button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
