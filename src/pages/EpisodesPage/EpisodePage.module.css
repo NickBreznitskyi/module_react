@@ -1,0 +1,11 @@
+.episode {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.wrap {
+    margin-top: 30px;
+}
+

@@ -1,0 +1,12 @@
+.outlet {
+    min-height: calc(100vh - 120px);
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

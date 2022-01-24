@@ -1,0 +1,9 @@
+.episode, .location {
+    width: 200px;
+    background-color: #BBC9DD;
+    padding: 10px;
+}
+
+.episode a {
+    text-decoration: none;
+}
