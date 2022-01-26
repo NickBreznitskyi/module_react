@@ -2,15 +2,14 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router';
 import {useLocation} from "react-router-dom";
 
-import {apiService} from "../../services/api.service";
 import {Character} from "../../components";
 import style from './EpisodeDetailsPage.module.css'
+import {characterService} from "../../services/character.service";
+import {helpers} from "../../helpers/helpers";
 
 
 const EpisodeDetailsPage = () => {
 
-    const [counter, setCounter] = useState(0);
-    const [isLoaded, setIsLoaded] = useState(true);
     const [data, setData] = useState([]);
 
     const {state: {name, air_date, episode, characters}} = useLocation();
@@ -20,22 +19,11 @@ const EpisodeDetailsPage = () => {
         navigate(-1)
     }
 
-    useEffect(async () => {
-        if (counter !== characters.length) {
-            try {
-                const charactersResult = await apiService.getByUrl(characters[counter]);
-                setData([...data, charactersResult]);
+    useEffect(() => {
+        const ids = helpers.getIds(characters);
+        characterService.getGroupByIds(ids).then(value => setData([...value]))
+    }, [])
 
-                if (counter + 1 === characters.length)
-                    setIsLoaded(false)
-
-                setCounter(counter + 1);
-            } catch (e) {
-                console.log(e);
-            }
-        }
-
-    }, [counter])
 
     return (
         <div>
@@ -47,12 +35,9 @@ const EpisodeDetailsPage = () => {
             <div className={style.goBack}>
                 <button onClick={goBack}>Back to Episodes</button>
             </div>
-            {isLoaded ?
-                <span>Loading...</span>
-                : <div className={style.characters}>
-                    {data.map(value => <Character {...value}/>)}
-                </div>
-            }
+            <div className={style.characters}>
+                {data.map(value => <Character key={value.id} {...value}/>)}
+            </div>
         </div>
     );
 };
