@@ -1,0 +1,4 @@
+.forms__wrap, .content__wrap {
+    display: flex;
+    justify-content: space-around;
+}
