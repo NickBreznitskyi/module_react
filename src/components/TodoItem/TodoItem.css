@@ -1,0 +1,10 @@
+.checkedToDo {
+    text-decoration-line: line-through;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 15px;
+}

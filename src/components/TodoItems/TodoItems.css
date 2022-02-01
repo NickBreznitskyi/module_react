@@ -1,0 +1,7 @@
+.todoItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    margin-top: 20px;
+}
